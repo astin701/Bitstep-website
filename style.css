@@ -420,6 +420,7 @@ CARD DESIGN
 .service-card .click-me{
     color: #666;
     line-height: 1.8;
+    padding-top: 10px;
 }
 
 .service-card p,
