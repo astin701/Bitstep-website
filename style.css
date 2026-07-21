@@ -417,6 +417,11 @@ CARD DESIGN
     margin-bottom:18px;
 }
 
+.service-card .click-me{
+    color: #666;
+    line-height: 1.8;
+}
+
 .service-card p,
 .program-card p{
     color:#666;
