@@ -1,0 +1,137 @@
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.10);
+}
+
+nav div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav div .back-btn{
+    margin-left: 50px;
+    background-color: #ff6b00;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: .3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+nav div .back-btn a{
+    text-decoration: none;
+    color: white;
+}
+
+nav div .back-btn:hover{
+    transform: translateY(-5px);
+}
+
+nav div .logo img{
+    width: 120px;
+    margin: 20px 30px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    margin-right: 50px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    transition: all ease .3s;
+    position: relative;
+}
+
+nav ul li a:hover,
+nav ul li a.active{
+    color: #ff6b00;
+}
+
+nav ul li a::before{
+    content: '';
+    position: absolute;
+    background: #ff6b00;
+    height: 3px;
+    bottom: -3px;
+    width: 0;
+    transition: .5s ease;
+}
+
+nav ul li a:hover::before,
+nav ul li a.active::before{
+    width: 100%;
+}
+
+#menu-btn{
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+section{
+    padding-top: 100px;
+}
+
+/* Responsiv header  */
+
+@media(max-width:991px) {
+
+    nav{
+        padding: 15px 20px;
+    }
+
+    nav div .back-btn{
+        margin-left: 0;
+    }
+
+    nav div .logo img{
+        margin: 0;
+        width: 100px;
+    }
+
+    nav ul{
+        margin-right: 0;
+    }
+
+    #menu-btn{
+        display: block;
+    }
+
+    #navbar{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 20px;
+        position: absolute;
+        top: 85px;
+        left: -100%;
+        width: 100%;
+        background: #ffff;
+        transition: .4s;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08)
+    }
+
+    #navbar.active{
+        left: 0;
+    }
+
+}
