@@ -443,3 +443,33 @@ section{
     background:#1f2937;
     transform: translateY(-5px);
 }
+
+/*====================================
+CUSTOM SCROLLBAR
+====================================*/
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#f3f3f3;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#ff6b00;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#e65c00;
+}
+
+/*====================================
+SELECTION
+====================================*/
+
+::selection{
+    background:#ff6b00;
+    color:#fff;
+} 
