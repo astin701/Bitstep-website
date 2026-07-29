@@ -1,0 +1,626 @@
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+nav{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.10);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+}
+
+nav div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav div .back-btn{
+    border-radius: 50%;
+    margin-left: 50px;
+    transition: .3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+nav div .back-btn a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    height: 50px;
+    width: 50px;
+    background-color: #ff6b00;
+    border-radius: 50%;
+}
+
+nav div .back-btn:hover{
+    transform: translateY(-5px);
+}
+
+nav div .logo img{
+    width: 120px;
+    margin: 20px 30px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    margin-right: 50px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    transition: all ease .3s;
+    position: relative;
+}
+
+nav ul li a:hover,
+nav ul li a.active{
+    color: #ff6b00;
+}
+
+nav ul li a::before{
+    content: '';
+    position: absolute;
+    background: #ff6b00;
+    height: 3px;
+    bottom: -3px;
+    width: 0;
+    transition: .5s ease;
+}
+
+nav ul li a:hover::before,
+nav ul li a.active::before{
+    width: 100%;
+}
+
+#menu-btn{
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+section{
+    padding-top: 90px;
+}
+
+
+
+/* Responsiv header  */
+
+@media(max-width:991px) {
+
+    nav{
+        padding: 15px 20px;
+    }
+
+    nav div .back-btn{
+        margin-left: 0;
+    }
+
+    nav div .logo img{
+        margin: 0;
+        width: 100px;
+    }
+
+    nav ul{
+        margin-right: 0;
+    }
+
+    #menu-btn{
+        display: block;
+    }
+
+    #navbar{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 20px;
+        position: absolute;
+        top: 85px;
+        left: 0;
+        width: 100%;
+        background: #ffff;
+        transition: .4s ease;
+        transform: translateX(-100%);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08)
+    }
+
+    #navbar.active{
+        transform: translateX(0);
+    }
+
+}
+
+.scroll-top{
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 50px;
+    height: 50px;
+    background: #ff6b00;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease;
+    z-index: 999;
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
+}
+
+.scroll-top.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover{
+    background:#1f2937;
+    transform: translateY(-5px);
+}
+
+/*====================================
+CUSTOM SCROLLBAR
+====================================*/
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#f3f3f3;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#ff6b00;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#e65c00;
+}
+
+/*====================================
+SELECTION
+====================================*/
+
+::selection{
+    background:#ff6b00;
+    color:#fff;
+}
+
+/*=========================================
+    PERSONALITY DEVELOPMENT
+==========================================*/
+
+.personality-development{
+    padding: 100px 8%;
+    background: #fafcfe;
+}
+
+.personality-development .container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Section Title */
+
+.personality-development .section-title{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.personality-development .section-title h2{
+    font-size: 2.6rem;
+    color: #0f172a;
+    margin-bottom: 15px;
+}
+
+.personality-development .section-title p{
+    max-width: 700px;
+    margin: auto;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* Layout */
+
+.personality-content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+/* Left Content */
+
+.personality-text{
+    flex: 1;
+}
+
+.personality-text h3{
+    font-size: 2rem;
+    color: #ff6b00;
+    margin-bottom: 20px;
+}
+
+.personality-text p{
+    color: #555;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+/* Service Cards */
+
+.personality-services{
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.personality-services .service-card{
+    background: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    transition: .3s ease;
+}
+
+.personality-services .service-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.15);
+}
+
+.personality-services .service-card i{
+    font-size: 3rem;
+    color: #ff6b00;
+    margin-bottom: 18px;
+}
+
+.personality-services .service-card h4{
+    font-size: 1.2rem;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.personality-services .service-card p{
+    color: #666;
+    font-size: .95rem;
+    line-height: 1.7;
+}
+
+/* Benefits */
+
+.personality-benefits{
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
+
+.personality-benefits h3{
+    text-align: center;
+    color: #ff6b00;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.personality-benefits ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 18px;
+    padding: 0;
+}
+
+.personality-benefits ul li{
+    background: #eef5ff;
+    padding: 15px 18px;
+    border-radius: 10px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Call To Action */
+
+.personality-cta{
+    background: linear-gradient(135deg, #f37013, #ff6b00);
+    color: #fff;
+    text-align: center;
+    padding: 60px 30px;
+    border-radius: 20px;
+}
+
+.personality-cta h3{
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.personality-cta p{
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.personality-cta .btn{
+    display: inline-block;
+    padding: 14px 35px;
+    background: #fff;
+    color: #ff6b00;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: .3s;
+}
+
+.personality-cta .btn:hover{
+    background: #111827;
+    color: #fff;
+}
+
+/*=========================================
+    RESPONSIVE
+==========================================*/
+
+@media(max-width:992px){
+
+    .personality-content{
+        flex-direction: column;
+    }
+
+    .personality-services{
+        width: 100%;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .personality-development{
+        padding: 100px 5%;
+    }
+
+    .personality-development .section-title h2{
+        font-size: 2rem;
+    }
+
+    .personality-text h3,
+    .personality-benefits h3,
+    .personality-cta h3{
+        font-size: 1.6rem;
+    }
+
+    .personality-services,
+    .personality-benefits ul{
+        grid-template-columns: 1fr;
+    }
+
+    .personality-services .service-card{
+        padding: 25px 18px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .personality-development .section-title h2{
+        font-size: 1.8rem;
+    }
+
+    .personality-cta{
+        padding: 40px 20px;
+    }
+
+    .personality-cta .btn{
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+#our-team{
+    padding: 100px 8%;
+    background: #f8f9fc;
+}
+
+#our-team .heading{
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 60px;
+}
+
+#our-team .heading h5{
+    color: #ff6600;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+#our-team .heading h1{
+    font-size: 42px;
+    color: #1f2937;
+    margin-bottom: 15px;
+}
+
+#our-team .heading h1 span{
+    color: #ff6600;
+}
+
+#our-team .heading p{
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Team Container */
+
+.team-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Trainer Card */
+
+.trainer-card{
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 18px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    transition: 0.4s ease;
+}
+
+.trainer-card::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 5px;
+    background: #ff6600;
+}
+
+.trainer-card:hover{
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+}
+
+/* Image */
+
+.trainer-card img{
+    width: calc(100% - 40px);
+    height: 360px;
+    margin: 20px auto 0;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 4px solid #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
+}
+
+/* Content */
+
+.trainer-content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.trainer-content h3{
+    font-size: 26px;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.trainer-content h5{
+    color: #ff6600;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.trainer-content p{
+    color: #555;
+    line-height: 1.8;
+    font-size: 15px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Skills */
+
+.skills{
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills span{
+    background: #ff6600;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.skills span:hover{
+    background: #1f2937;
+    cursor: pointer;
+}
+
+/* Responsive */
+
+@media (max-width: 992px){
+
+    #our-team{
+        padding: 70px 6%;
+    }
+
+    .trainer-card{
+        width: 340px;
+    }
+}
+
+@media (max-width: 768px){
+
+    #our-team{
+        padding: 100px 20px;
+    }
+
+    #our-team .heading h1{
+        font-size: 32px;
+    }
+
+    .trainer-card{
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .trainer-card img{
+        width: calc(100% - 40px);
+        height: 320px;
+        object-fit: cover;
+    }
+
+    .trainer-content h3{
+        font-size: 22px;
+    }
+
+    .trainer-content h5{
+        font-size: 15px;
+    }
+}
