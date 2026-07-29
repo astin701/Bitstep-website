@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical Learning | BitStep Academy</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="icon" type="image/png" href="../images/Bitstep_tab-logo_.png">
+    <link rel="stylesheet" href="../CSS/practical.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <nav>
+        <div>
+            <div class="back-btn"><a href="../index.html#why-us" class="active"><i class='bx bx-arrow-back' ></i></a></div>
+            <div class="logo"><img src="../images/Bitstep_logo.png" alt="Bitstep Logo"></div>
+        </div>
+        
+    </nav>
+
+    <!-- ==============================
+        Practical Learning Section
+    ============================== -->
+    <section class="practical-learning" id="practical-learning">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Practical Learning</h2>
+                <p>
+                    Learn by doing with hands-on training, real-world projects, and
+                    practical exercises that prepare you for academic and professional success.
+                </p>
+            </div>
+
+            <div class="practical-content">
+
+                <div class="practical-text">
+                    <h3>Experience Learning Beyond the Classroom</h3>
+
+                    <p>
+                        At <strong>Bitstep Academy, Tirunelveli</strong>, we believe that
+                        practical experience is the key to mastering any skill. Our
+                        Practical Learning Program emphasizes hands-on activities,
+                        interactive sessions, real-world projects, and problem-solving
+                        exercises that help students apply theoretical concepts with confidence.
+                    </p>
+
+                    <p>
+                        Whether you're learning communication skills, computer
+                        applications, programming, or placement training, our
+                        practical approach ensures you gain valuable experience and
+                        develop the confidence to perform in real-life situations.
+                    </p>
+                </div>
+
+                <div class="practical-services">
+
+                    <div class="service-card">
+                        <i class="bx bx-laptop"></i>
+                        <h4>Hands-on Training</h4>
+                        <p>
+                            Learn through practical exercises, live demonstrations,
+                            and guided activities instead of theory alone.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <i class="bx bx-code-alt"></i>
+                        <h4>Real-Time Projects</h4>
+                        <p>
+                            Work on real-world projects that improve technical,
+                            analytical, and problem-solving skills.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <i class="bx bx-task"></i>
+                        <h4>Interactive Assignments</h4>
+                        <p>
+                            Reinforce your learning through assignments,
+                            case studies, and practical challenges.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <i class="bx bx-group"></i>
+                        <h4>Collaborative Learning</h4>
+                        <p>
+                            Participate in team activities, discussions, and group
+                            projects to improve teamwork and communication.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <i class="bx bx-bulb"></i>
+                        <h4>Problem Solving</h4>
+                        <p>
+                            Develop critical thinking and decision-making skills by
+                            solving real-life scenarios and practical problems.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <i class="bx bx-award"></i>
+                        <h4>Skill Assessment</h4>
+                        <p>
+                            Track your progress with regular assessments,
+                            feedback sessions, and performance evaluations.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="practical-benefits">
+                <h3>Why Practical Learning Matters</h3>
+
+                <ul>
+                    <li>✔ Learn through real-world experiences</li>
+                    <li>✔ Improve problem-solving and analytical skills</li>
+                    <li>✔ Build confidence through hands-on practice</li>
+                    <li>✔ Enhance teamwork and communication abilities</li>
+                    <li>✔ Gain industry-relevant knowledge and experience</li>
+                    <li>✔ Be better prepared for higher education and careers</li>
+                </ul>
+            </div>
+
+            <div class="practical-cta">
+                <h3>Learn by Doing. Succeed by Experience.</h3>
+
+                <p>
+                    Join Bitstep Academy's Practical Learning Program and gain the
+                    skills, confidence, and real-world experience needed to achieve
+                    academic excellence and career success.
+                </p>
+
+                <a href="../index.html#contact" class="btn">Enroll Today</a>
+
+            </div>
+
+        </div>
+    </section>
+    
+    <script>
+        
+        // ======================================
+        // SCROLL TO TOP BUTTON
+        // ======================================
+
+        const scrollBtn = document.createElement("div");
+
+        scrollBtn.className = "scroll-top";
+        scrollBtn.innerHTML = "↑";
+
+        document.body.appendChild(scrollBtn);
+
+        window.addEventListener("scroll", () => {
+
+            if (window.scrollY > 500) {
+                scrollBtn.classList.add("show");
+            } else {
+                scrollBtn.classList.remove("show");
+            }
+
+        });
+
+        scrollBtn.addEventListener("click", () => {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        });
+    </script>
+</body>
+</html>
