@@ -93,3 +93,412 @@ nav ul li a.active::before{
     font-size: 32px;
     cursor: pointer;
 }
+
+.communication {
+    padding: 80px 8%;
+    background: #f8f9fc;
+}
+
+.communication .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Section Header */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2.8rem;
+    color: #ff6600;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.section-header p {
+    max-width: 750px;
+    margin: auto;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Intro Text */
+.communication-text {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.communication-text h3 {
+    font-size: 2rem;
+    color: #ff6600;
+    margin-bottom: 20px;
+}
+
+.communication-text p {
+    max-width: 850px;
+    margin: 0 auto 20px;
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* Feature Cards */
+.communication-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+.feature-card {
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+    border-top: 5px solid #ff6600;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.feature-card h4 {
+    font-size: 1.3rem;
+    color: #ff6600;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Footer */
+.communication-footer {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.communication-footer h3 {
+    text-align: center;
+    color: #ff6600;
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+.communication-footer ul {
+    list-style: none;
+    max-width: 700px;
+    margin: auto;
+    padding: 0;
+}
+
+.communication-footer ul li {
+    font-size: 1.05rem;
+    color: #444;
+    margin-bottom: 15px;
+    padding-left: 5px;
+}
+
+.quote {
+    margin-top: 35px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ff6600;
+    font-style: italic;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .section-header h2 {
+        font-size: 2.3rem;
+    }
+
+    .communication-text h3,
+    .communication-footer h3 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .communication {
+        padding: 60px 5%;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .communication-text h3,
+    .communication-footer h3 {
+        font-size: 1.6rem;
+    }
+
+    .feature-card {
+        padding: 25px 20px;
+    }
+
+    .communication-footer {
+        padding: 30px 20px;
+    }
+
+    .quote {
+        font-size: 1rem;
+    }
+}
+
+/* =========================
+   OUR TEAM
+========================= */
+
+#our-team{
+    padding: 100px 8%;
+    background: #f8f9fc;
+}
+
+#our-team .heading{
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 60px;
+}
+
+#our-team .heading h5{
+    color: #ff6600;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+#our-team .heading h1{
+    font-size: 42px;
+    color: #1f2937;
+    margin-bottom: 15px;
+}
+
+#our-team .heading h1 span{
+    color: #ff6600;
+}
+
+#our-team .heading p{
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Team Container */
+
+.team-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Trainer Card */
+
+.trainer-card{
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 18px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    transition: 0.4s ease;
+}
+
+.trainer-card::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 5px;
+    background: #ff6600;
+}
+
+.trainer-card:hover{
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+}
+
+/* Image */
+
+.trainer-card img{
+    width: calc(100% - 40px);
+    height: 360px;
+    margin: 20px auto 0;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 4px solid #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
+}
+
+/* Content */
+
+.trainer-content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.trainer-content h3{
+    font-size: 26px;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.trainer-content h5{
+    color: #ff6600;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.trainer-content p{
+    color: #555;
+    line-height: 1.8;
+    font-size: 15px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Skills */
+
+.skills{
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills span{
+    background: #ff6600;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.skills span:hover{
+    background: #1f2937;
+    cursor: pointer;
+}
+
+/* Responsive */
+
+@media (max-width: 992px){
+
+    #our-team{
+        padding: 70px 6%;
+    }
+
+    .trainer-card{
+        width: 340px;
+    }
+}
+
+@media (max-width: 768px){
+
+    #our-team{
+        padding: 60px 20px;
+    }
+
+    #our-team .heading h1{
+        font-size: 32px;
+    }
+
+    .trainer-card{
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .trainer-card img{
+        width: calc(100% - 40px);
+        height: 320px;
+        object-fit: cover;
+    }
+
+    .trainer-content h3{
+        font-size: 22px;
+    }
+
+    .trainer-content h5{
+        font-size: 15px;
+    }
+}
+
+.scroll-top{
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 50px;
+    height: 50px;
+    background: #ff6b00;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease;
+    z-index: 999;
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
+}
+
+.scroll-top.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover{
+    background:#1f2937;
+    transform: translateY(-5px);
+}
+
+/*====================================
+CUSTOM SCROLLBAR
+====================================*/
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#f3f3f3;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#ff6b00;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#e65c00;
+}
+
+/*====================================
+SELECTION
+====================================*/
+
+::selection{
+    background:#ff6b00;
+    color:#fff;
+} 
