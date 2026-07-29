@@ -17,7 +17,6 @@ nav{
     top: 0;
     left: 0;
     z-index: 1000;
-
 }
 
 nav div{
@@ -94,8 +93,55 @@ nav ul li a.active::before{
     cursor: pointer;
 }
 
-.communication {
-    padding: 80px 8%;
+
+/* Responsiv header  */
+
+@media(max-width:991px) {
+
+    nav{
+        padding: 15px 20px;
+    }
+
+    nav div .back-btn{
+        margin-left: 0;
+    }
+
+    nav div .logo img{
+        margin: 0;
+        width: 100px;
+    }
+
+    nav ul{
+        margin-right: 0;
+    }
+
+    #menu-btn{
+        display: block;
+    }
+
+    #navbar{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 20px;
+        position: absolute;
+        top: 85px;
+        left: 0;
+        width: 100%;
+        background: #ffff;
+        transition: .4s ease;
+        transform: translateX(-100%);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08)
+    }
+
+    #navbar.active{
+        transform: translateX(0);
+    }
+
+}
+
+.communication{
+    padding: 100px 8%;
     background: #f8f9fc;
 }
 
@@ -104,7 +150,8 @@ nav ul li a.active::before{
     margin: auto;
 }
 
-/* Section Header */
+/* Section part */
+
 .section-header {
     text-align: center;
     margin-bottom: 60px;
@@ -133,7 +180,7 @@ nav ul li a.active::before{
 
 .communication-text h3 {
     font-size: 2rem;
-    color: #ff6600;
+    color: #000000;
     margin-bottom: 20px;
 }
 
@@ -230,7 +277,7 @@ nav ul li a.active::before{
 
 @media (max-width: 768px) {
     .communication {
-        padding: 60px 5%;
+        padding: 120px 5%;
     }
 
     .section-header h2 {
@@ -404,7 +451,7 @@ nav ul li a.active::before{
 @media (max-width: 992px){
 
     #our-team{
-        padding: 70px 6%;
+        padding: 90px 6%;
     }
 
     .trainer-card{
@@ -415,7 +462,7 @@ nav ul li a.active::before{
 @media (max-width: 768px){
 
     #our-team{
-        padding: 60px 20px;
+        padding: 110px 20px;
     }
 
     #our-team .heading h1{
