@@ -202,6 +202,7 @@ HERO
 }
 
 .hero-text p{
+    text-align: justify;
     color:#666;
     margin-bottom:35px;
     font-size:17px;
@@ -358,6 +359,7 @@ ABOUT SECTION
 }
 
 .about-content p{
+    text-align: justify;
     color:#666;
     margin-bottom:20px;
     line-height:1.8;
@@ -384,9 +386,8 @@ COMMON GRID
 .service-grid,
 .program-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:30px;
-    margin-top:50px;
 }
 
 /*====================================
@@ -420,6 +421,9 @@ TEXT
 
 .service-card h3,
 .program-card h3{
+    display: flex;
+    align-items: center;
+    gap: 15px;
     color:#222;
     font-size:24px;
     margin-bottom:18px;
@@ -427,11 +431,13 @@ TEXT
 
 .service-card p,
 .program-card p{
+    text-align: justify;
     color:#666;
     line-height:1.8;
 }
 
 .service-card .click-me{
+    text-align: center;
     color:#ff6b00;
     font-weight:600;
     margin-top:15px;
@@ -449,9 +455,8 @@ OPTIONAL ICON STYLE
 .service-card i,
 .program-card i{
     display:block;
-    font-size:50px;
+    font-size:30px;
     color:#ff6b00;
-    margin-bottom:20px;
 }
 
 /*====================================
@@ -793,6 +798,7 @@ TESTIMONIALS
 }
 
 .testimonial-card p{
+    text-align: justify;
     color:#666;
     line-height:1.8;
     margin-bottom:20px;
@@ -996,13 +1002,20 @@ CONTACT
 }
 
 .contact-details p{
-    margin-bottom:20px;
+    margin-bottom: 20px;
     color:#444;
     line-height:1.7;
 }
 
 .contact-details strong{
+    display: inline-flex;
+    gap: 8px;
     color:#222;
+}
+
+.contact-details i{
+    color: #ff6b00;
+    font-size: 26px;
 }
 
 /*====================================
@@ -1141,6 +1154,7 @@ footer{
 .footer-about p{
     color:#d1d5db;
     line-height:1.8;
+    text-align: justify;
 }
 
 .footer-links h3,
